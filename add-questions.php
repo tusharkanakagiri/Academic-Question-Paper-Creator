@@ -79,7 +79,7 @@ error_reporting(0);
                   <h5 class="centered" id="userloggedin"><?php echo $_SESSION['name']; ?></h5>
                     
                   <li class="mt">
-                      <a class="active" href="home.php">
+                      <a href="home.php">
                           <i class="fa fa-dashboard"></i>
                           <span>Home</span>
                       </a>
@@ -93,7 +93,7 @@ error_reporting(0);
                   </li>
 
                   <li class="sub-menu">
-                      <a href="select-graph.php" >
+                      <a class="active" href="select-graph.php" >
                           <i class="fa fa-bar-chart-o"></i>
                           <span>Review Papers</span>
                       </a>
@@ -105,7 +105,6 @@ error_reporting(0);
                           <span>Settings</span>
                       </a>
                   </li>
-                  
                   <li class="sub-menu">
                       <a href="add-questions.php" >
                           <i class="fa fa-cogs"></i>
@@ -117,73 +116,92 @@ error_reporting(0);
           </div>
       </aside>
       <!--sidebar end-->
-      
+
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
-      <section id="main-content">
+       <section id="main-content">
           <section class="wrapper">
+            <div class="col-lg-9 main-chart">
+            <h3>Add Question</h3>
               <div class="row">
-                  <div class="col-lg-9 main-chart">
-                      <h1>WELCOME TO THE RVCE QUESTION PAPER CREATOR</h1>
-                      <div class="row mt">
-                      
-                      <!-- Create Paper -->
-
-
-                      <a href="create-paper.php">
-                        <div class="col-md-4 col-sm-4 mb">
-                          <div class="green-panel pn donut-chart">
-                            <div class="green-header">
-                               <h5>Create Paper</h5>
-                            </div>
-                            <br>
-                              <img src="assets/img/paps.png"></img>
-                          </div><!--/grey-panel -->
-                        </div><!-- /col-md-4-->
-                      </a>  
-
-                      <a href="select-graph.php">
-                        <div class="col-md-4 col-sm-4 mb">
-                            <div class="green-panel pn">
-                              <div class="green-header">
-                                <h5>Review Papers</h5>
+                  
+                  <div class="form-panel">
+                    <br>
+                      <form class="form-horizontal style-form" method="post" action="add-questions-backend.php">
+                          <input type="hidden" name="new_paper_created" value="1" />
+                          <div class="form-group">
+                              <label class="col-sm-3 col-sm-3 control-label">&emsp;Subject Code</label>
+                              <div class="col-sm-3">
+                                <input type="text" class="form-control" name="subject_code" id="subject_code" required/>
                               </div>
-                            <canvas id="cocharts" height="120" width="120"></canvas>
-                            <script>
-                              var doughnutData = [
-                                  {
-                                    value: 60,
-                                    color:"#2b2b2b"
-                                  },
-                                  {
-                                    value : 40,
-                                    color : "#fffffd"
-                                  }
-                                ];
-                                var myDoughnut = new Chart(document.getElementById("cocharts").getContext("2d")).Doughnut(doughnutData);
-                            </script>
-                          <h3>Papers Created</h3>
                           </div>
-                        </div><!--/col-md-4 -->
-                      </a>
+                          
+                          
+                          <h4 id="theory_heading">Question Parameters</h4>
+                              <table class="table table-hover" id="add-question">
+                                <thead>
+                                  <tr>
+                                    <th>Question Number</th>
+                                    <th>Chapter</th>
+                                    <th>Total Marks</th>
+                                    <th>Course Outcome</th>
+                                    <th>Blooms Taxonomy</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="theory_table_body">
+                                  <tr>
+                                    <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 1</td>
+                                    <td>
+                                      <input type="number" min="1" max="10" name="add_q_chap" class="form-control" required>  
+                                      <div class="col-sm-1 text-center">
+                                          <div class="switch switch-square"
+                                               data-on-label="<i class=' fa fa-check'></i>"
+                                               data-off-label="<i class='fa fa-times'></i>">
+                                               <input type="checkbox" name="add_q_chap" value="1" checked="true" >
+                                          </div>
+                                      </div>
+                                    
+                                    </td>
+                                    <td><input type="number" min="1" max="10" name="add_q_marks" class="form-control" required></td>
+                                    <td>
+                                      <select class="form-control" name="add_q_co" id="add_q_co">
+                                        <option value="CO-1">CO-1</option>
+                                        <option value="CO-2">CO-2</option>
+                                        <option value="CO-3">CO-3</option>
+                                        <option value="CO-4">CO-4</option>
+                                      </select>
+                                    </td>
+                                    <td>
+                                      <select class="form-control" name="add_q_lo" id="add_q_lo">
+                                        <option value="LO-1">LO-1</option>
+                                        <option value="LO-2">LO-2</option>
+                                        <option value="LO-3">LO-3</option>
+                                        <option value="LO-4">LO-4</option>
+                                      </select>
+                                    </td>
+                                  </tr>
+                                  
+                                    
+                                      
+                              <label class="col-sm-6 col-sm-6 control-label">&emsp;Question</label>
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control" name="add_question" id="subject_code" required/>
+                              </div>
+                          
+                        
+                                  
+                                </tbody>
+                              </table>
+                              <div style="margin-left:40px;" >
+                              <button type="submit" style="width:120px" class="btn btn-round btn-success" id="submit" name="add-question-submit">Submit</button>
+                          </div>
+                      </form>
+                      </div><!-- form-panel -->
+            </div><!-- /row -->
+          </div>
 
-                      <a href="settings.php">
-                        <div class="col-md-4 col-sm-4 mb">
-                          <div class="green-panel pn donut-chart">
-                            <div class="green-header">
-                               <h5>Settings</h5>
-                            </div>
-                            <br><br>
-                              <img src="assets/img/gears1.gif"></img>
-                          </div><!--/grey-panel -->
-                        </div><!-- /col-md-4-->
-                      </a>
-
-
-                      
-          </div><!-- /row -->
           <!-- **********************************************************************************************************************************************************
       RIGHT SIDEBAR CONTENT
       *********************************************************************************************************************************************************** -->                  
@@ -224,80 +242,55 @@ error_reporting(0);
       <!--footer end-->
   </section>
 
-  <!-- js placed at the end of the document so the pages load faster -->
-  <script src="assets/js/jquery.js"></script>
-  <script src="assets/js/jquery-1.8.3.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-  <script src="assets/js/jquery.scrollTo.min.js"></script>
-  <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-  <script src="assets/js/jquery.sparkline.js"></script>
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery-1.8.3.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.sparkline.js"></script>
 
 
-  <!--common script for all pages-->
-  <script src="assets/js/common-scripts.js"></script>
-  
-  <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
-  <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
+    <!--common script for all pages-->
+    <script src="assets/js/common-scripts.js"></script>
+    
+    <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
+    <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
 
-  <!--script for this page-->
-  <script src="assets/js/sparkline-chart.js"></script>    
-  <script src="assets/js/zabuto_calendar.js"></script>  
-
-  <?php
-    if (isset($_SESSION['first_time_on_home'])) {
-      unset($_SESSION['first_time_on_home']);
-  ?>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      var unique_id = $.gritter.add({
-        title: 'Succesfully Logged In!',
-        text: 'Welcome to RVCE Question Paper Creator',
-        image: '<?php echo $_SESSION["profile"]; ?>',
-        sticky: false,
-        time: '10000',
-        class_name: 'my-sticky-class'
+    <!--script for this page-->
+    <script src="assets/js/sparkline-chart.js"></script>    
+    <script src="assets/js/zabuto_calendar.js"></script>  
+    <script type="application/javascript">
+      $(document).ready(function () {
+          $("#date-popover").popover({html: true, trigger: "manual"});
+          $("#date-popover").hide();
+          $("#date-popover").click(function (e) {
+              $(this).hide();
+          });
+      
+          $("#my-calendar").zabuto_calendar({
+              action: function () {
+                  return myDateFunction(this.id, false);
+              },
+              action_nav: function () {
+                  return myNavFunction(this.id);
+              },
+              ajax: {
+                  url: "show_data.php?action=1",
+                  modal: true
+              },
+              legend: [
+              ]
+          });
       });
-
-      return false;
-    });
-  </script>
-  <?php
-    }
-  ?>
-  <script type="application/javascript">
-        $(document).ready(function () {
-            $("#date-popover").popover({html: true, trigger: "manual"});
-            $("#date-popover").hide();
-            $("#date-popover").click(function (e) {
-                $(this).hide();
-            });
-        
-            $("#my-calendar").zabuto_calendar({
-                action: function () {
-                    return myDateFunction(this.id, false);
-                },
-                action_nav: function () {
-                    return myNavFunction(this.id);
-                },
-                ajax: {
-                    url: "show_data.php?action=1",
-                    modal: true
-                },
-                legend: [
-                ]
-            });
-        });
-        
-        
-        function myNavFunction(id) {
-            $("#date-popover").hide();
-            var nav = $("#" + id).data("navigation");
-            var to = $("#" + id).data("to");
-            console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
-        }
+      
+      function myNavFunction(id) {
+          $("#date-popover").hide();
+          var nav = $("#" + id).data("navigation");
+          var to = $("#" + id).data("to");
+          console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
+      }
     </script>
-  
-
   </body>
 </html>

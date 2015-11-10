@@ -105,6 +105,12 @@ error_reporting(0);
                           <span>Settings</span>
                       </a>
                   </li>
+                  <li class="sub-menu">
+                      <a href="add-questions.php" >
+                          <i class="fa fa-cogs"></i>
+                          <span>Add Questions</span>
+                      </a>
+                  </li>
               </ul>
               <!-- sidebar menu end-->
           </div>

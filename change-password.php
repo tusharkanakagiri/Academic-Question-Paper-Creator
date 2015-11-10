@@ -99,11 +99,17 @@ error_reporting(0);
                   </li>
 
                   <li class="sub-menu">
-                      <a class="active" href="settings.php" >
-                          <i class="fa fa-cogs"></i>
-                          <span>Settings</span>
-                      </a>
-                  </li>
+            <a href="settings.php" >
+              <i class="fa fa-cogs"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li class="sub-menu">
+            <a href="add-questions.php" >
+              <i class="fa fa-cogs"></i>
+              <span>Add Questions</span>
+            </a>
+          </li>
               </ul>
               <!-- sidebar menu end-->
           </div>
