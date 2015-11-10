@@ -16,7 +16,7 @@ error_reporting(0);
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-  <title>RVCE Q Paper Creator</title>
+  <title>RVCE C.O. Manager</title>
 
   <!-- Bootstrap core CSS -->
   <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -49,7 +49,7 @@ error_reporting(0);
         </div>
 
         <!--logo start-->
-        <a href="home.php" class="logo"><b>RVCE Q Paper Creator</b></a>
+        <a href="home.php" class="logo"><b>RVCE C.O. Manager</b></a>
         <!--logo end-->
 
         <form action="login.php" method="POST">
@@ -87,7 +87,7 @@ error_reporting(0);
           <li class="sub-menu">
             <a class="active" href="paper-select.php" >
               <i class="fa fa-tasks"></i>
-              <span>Create Paper</span>
+              <span>Add Student Marks</span>
             </a>
           </li>
 
@@ -195,7 +195,7 @@ error_reporting(0);
     <!--footer start--><br><br><br><br><br><br><br><br>
     <footer class="site-footer">
       <div class="text-center">
-        2015 - Tushar Kanakagiri and Uttam Bhat
+        2014 - Aditya Muttur and Vishnu V Narayan
         <a href="#" class="go-top">
           <i class="fa fa-angle-up"></i>
         </a>

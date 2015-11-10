@@ -16,7 +16,7 @@ error_reporting(0);
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina" >
 
-    <title>RVCE Q Paper Creator</title>
+    <title>RVCE Q Paper Creatorr</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -168,8 +168,10 @@ error_reporting(0);
                                 <thead>
                                   <tr>
                                     <th>Question Number</th>
+                                    <th>Chapter</th>
                                     <th>Total Marks</th>
                                     <th>Course Outcome</th>
+                                    <th>Blooms Taxonomy</th>
                                   </tr>
                                 </thead>
                                 <tbody id="quiz_table_body">
@@ -181,15 +183,17 @@ error_reporting(0);
                                 <thead>
                                   <tr>
                                     <th>Question Number</th>
-                                    <th>Is Question Present</th>
+                                    <th>Chapter</th>
                                     <th>Total Marks</th>
                                     <th>Course Outcome</th>
+                                    <th>Blooms Taxonomy</th>
                                   </tr>
                                 </thead>
                                 <tbody id="theory_table_body">
                                   <tr>
                                     <td>1a</td>
                                     <td>
+                                      <input type="number" min="0" max="10" name="theory_chapter_1a" class="form-control" required>  
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -197,6 +201,7 @@ error_reporting(0);
                                                <input type="checkbox" name="theory_present_1a" value="1" checked="true" >
                                           </div>
                                       </div>
+                                    
                                     </td>
                                     <td><input type="number" min="0" max="10" name="theory_marks_1a" class="form-control" required></td>
                                     <td>
@@ -220,6 +225,7 @@ error_reporting(0);
                                   <tr>
                                     <td>1b</td>
                                     <td>
+                                      <input type="number" min="0" max="10" name="theory_chapter_1b" class="form-control" required> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -230,7 +236,7 @@ error_reporting(0);
                                     </td>
                                     <td><input type="number" min="0" max="10" name="theory_marks_1b" class="form-control"></td>
                                     <td>
-                                      <select class="form-control" name="theory_co_1a" id="theory_co_1a">
+                                      <select class="form-control" name="theory_co_1b" id="theory_co_1a">
                                         <option value="CO-1">CO-1</option>
                                         <option value="CO-2">CO-2</option>
                                         <option value="CO-3">CO-3</option>
@@ -250,6 +256,7 @@ error_reporting(0);
                                   <tr>
                                     <td>1c</td>
                                     <td>
+                                      <input type="number" min="0" max="10" name="theory_chapter_1c" class="form-control" required> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -282,6 +289,7 @@ error_reporting(0);
                                   <tr>
                                     <td>2a</td>
                                     <td>
+                                      <input type="number" min="0" max="10" name="theory_chapter_2a" class="form-control" required> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -312,6 +320,7 @@ error_reporting(0);
                                   <tr>
                                     <td>2b</td>
                                     <td>
+                                      <input type="number" min="0" max="10" name="theory_chapter_2b" class="form-control" required> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -342,6 +351,7 @@ error_reporting(0);
                                   <tr>
                                     <td>2c</td>
                                     <td>
+                                      <input type="number" min="0" max="10" name="theory_chapter_2c" class="form-control" required> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -374,6 +384,7 @@ error_reporting(0);
                                   <tr>
                                     <td>3a</td>
                                     <td>
+                                      <input type="number" min="0" max="10" name="theory_chapter_3a" class="form-control" required> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -404,6 +415,7 @@ error_reporting(0);
                                   <tr>
                                     <td>3b</td>
                                     <td>
+                                      <input type="number" min="0" max="10" name="theory_chapter_3b" class="form-control" required> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -434,6 +446,7 @@ error_reporting(0);
                                   <tr>
                                     <td>3c</td>
                                     <td>
+                                      <input type="number" min="0" max="10" name="theory_chapter_3c" class="form-control" required> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -466,6 +479,7 @@ error_reporting(0);
                                   <tr>
                                     <td>4a</td>
                                     <td>
+                                      <input type="number" min="0" max="10" name="theory_chapter_4a" class="form-control" required> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -497,6 +511,7 @@ error_reporting(0);
                                   <tr>
                                     <td>4b</td>
                                     <td>
+                                      <input type="number" min="0" max="10" name="theory_chapter_4b" class="form-control" required> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -527,6 +542,7 @@ error_reporting(0);
                                   <tr>
                                     <td>4c</td>
                                     <td>
+                                      <input type="number" min="0" max="10" name="theory_chapter_4c" class="form-control" required> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -559,6 +575,7 @@ error_reporting(0);
                                   <tr>
                                     <td>5a</td>
                                     <td>
+                                      <input type="number" min="0" max="10" name="theory_chapter_5a" class="form-control" required> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -589,6 +606,7 @@ error_reporting(0);
                                   <tr>
                                     <td>5b</td>
                                     <td>
+                                      <input type="number" min="0" max="10" name="theory_chapter_5b" class="form-control" required> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -619,6 +637,7 @@ error_reporting(0);
                                   <tr>
                                     <td>5c</td>
                                     <td>
+                                      <input type="number" min="0" max="10" name="theory_chapter_5c" class="form-control" required> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -785,7 +804,9 @@ error_reporting(0);
           var row = "<tr><td>"; "</td><td></td><td></td>";
           var questions = parseInt($($(this)).val());
           for (var i = 1; i <= questions; i++) {
-            var r1 = "<tr><td>" + i.toString() + "</td>";
+            var r16 = "<tr><td>" + i.toString() + "</td>";
+            var r17 = '<td><input type="number" min="1" max="10" name="qchapter'+ i.toString() + '" class="form-control" required></td>';
+            var r1 = "<td>" + i.toString() + "</td>";
             var r2 = '<td><input type="number" min="1" max="2" name="qmark'+ i.toString() + '" class="form-control" required></td>';
             var r3 = '<td><select name="qco'+ i.toString() + '" class="form-control" required>';
             var r4 = '<option value="CO-1">CO-1</option>';
@@ -801,7 +822,7 @@ error_reporting(0);
             var r13 = '<option value="LO-3">LO-3</option>';
             var r14 = '<option value="LO-4">LO-4</option>';
             var r15 = '</select></td></tr>';
-            $($("#quiz_table_body")).append(r1+r2+r3+r4+r5+r6+r7+r8+r10+r11+r12+r13+r14+r15);
+            $($("#quiz_table_body")).append(r16+r17+r2+r3+r4+r5+r6+r7+r8+r10+r11+r12+r13+r14+r15);
           };
           console.log(questions);
 

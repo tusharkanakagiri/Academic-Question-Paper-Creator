@@ -133,63 +133,77 @@ error_reporting(0);
 
 /* ----------------------     Taking Quiz Related Parameters ----------------------------------  */
 
-                                        
+                                        $quiz_chapter_1=($_POST['qchapter1']);
                                         $quiz_marks_1=($_POST['qmark1']);
                                         $quiz_co_1=($_POST['qco1']);
                                         $quiz_lo_1=($_POST['qlo1']);
 
+                                        $quiz_chapter_2=($_POST['qchapter2']);
                                         $quiz_marks_2=($_POST['qmark2']);
                                         $quiz_co_2=($_POST['qco2']);
                                         $quiz_lo_2=($_POST['qlo2']);
 
+                                        $quiz_chapter_3=($_POST['qchapter3']);
                                         $quiz_marks_3=($_POST['qmark3']);
                                         $quiz_co_3=($_POST['qco3']);
                                         $quiz_lo_3=($_POST['qlo3']);
 
+                                        $quiz_chapter_4=($_POST['qchapter4']);
                                         $quiz_marks_4=($_POST['qmark4']);
                                         $quiz_co_4=($_POST['qco4']);
                                         $quiz_lo_4=($_POST['qlo4']);
 
+                                        $quiz_chapter_5=($_POST['qchapter5']);
                                         $quiz_marks_5=($_POST['qmark5']);
                                         $quiz_co_5=($_POST['qco5']);
                                         $quiz_lo_5=($_POST['qlo5']);
 
+                                        $quiz_chapter_6=($_POST['qchapter6']);
                                         $quiz_marks_6=($_POST['qmark6']);
                                         $quiz_co_6=($_POST['qco6']);
                                         $quiz_lo_6=($_POST['qlo6']);
 
+                                        $quiz_chapter_7=($_POST['qchapter7']);
                                         $quiz_marks_7=($_POST['qmark7']);
                                         $quiz_co_7=($_POST['qco7']);
                                         $quiz_lo_7=($_POST['qlo7']);
 
+                                        $quiz_chapter_8=($_POST['qchapter8']);
                                         $quiz_marks_8=($_POST['qmark8']);
                                         $quiz_co_8=($_POST['qco8']);
                                         $quiz_lo_8=($_POST['qlo8']);
 
+                                        $quiz_chapter_9=($_POST['qchapter9']);
                                         $quiz_marks_9=($_POST['qmark9']);
                                         $quiz_co_9=($_POST['qco9']);
                                         $quiz_lo_9=($_POST['qlo9']);
 
+                                        $quiz_chapter_10=($_POST['qchapter10']);
                                         $quiz_marks_10=($_POST['qmark10']);
                                         $quiz_co_10=($_POST['qco10']);
                                         $quiz_lo_10=($_POST['qlo10']);
 
+                                        $quiz_chapter_11=($_POST['qchapter11']);
                                         $quiz_marks_11=($_POST['qmark11']);
                                         $quiz_co_11=($_POST['qco11']);
                                         $quiz_lo_11=($_POST['qlo11']);
 
+                                        $quiz_chapter_12=($_POST['qchapter12']);
                                         $quiz_marks_12=($_POST['qmark12']);
                                         $quiz_co_12=($_POST['qco12']);
                                         $quiz_lo_12=($_POST['qlo12']);
 
+                                        $quiz_chapter_13=($_POST['qchapter13']);
                                         $quiz_marks_13=($_POST['qmark13']);
                                         $quiz_co_13=($_POST['qco13']);
                                         $quiz_lo_13=($_POST['qlo13']);
 
+                                        $quiz_chapter_14=($_POST['qchapter14']);
                                         $quiz_marks_14=($_POST['qmark14']);
                                         $quiz_co_14=($_POST['qco14']);
                                         $quiz_lo_14=($_POST['qlo14']);
 
+                                        $quiz_chapter_15=($_POST['qchapter15']);
                                         $quiz_marks_15=($_POST['qmark15']);
                                         $quiz_co_15=($_POST['qco15']);
                                         $quiz_lo_15=($_POST['qlo15']);
@@ -197,66 +211,77 @@ error_reporting(0);
                                         
 /* ----------------------     Taking Theory Related Parameters ----------------------------------  */
 
+                                        $theory_chapter_1=($_POST['theory_chapter_1a']);
                                         $theory_marks_1=($_POST['theory_marks_1a']);
                                         $theory_co_1=($_POST['theory_co_1a']);
                                         $theory_lo_1=($_POST['theory_lo_1a']);
 
+                                        $theory_chapter_2=($_POST['theory_chapter_1b']);
                                         $theory_marks_2=($_POST['theory_marks_1b']);
                                         $theory_co_2=($_POST['theory_co_1b']);
                                         $theory_lo_2=($_POST['theory_lo_1b']);
 
+                                        $theory_chapter_3=($_POST['theory_chapter_1c']);
                                         $theory_marks_3=($_POST['theory_marks_1c']);
                                         $theory_co_3=($_POST['theory_co_1c']);
                                         $theory_lo_3=($_POST['theory_lo_1c']);
 
-
+                                        $theory_chapter_4=($_POST['theory_chapter_2a']);
                                         $theory_marks_4=($_POST['theory_marks_2a']);
                                         $theory_co_4=($_POST['theory_co_2a']);
                                         $theory_lo_4=($_POST['theory_lo_2a']);
 
+                                        $theory_chapter_5=($_POST['theory_chapter_2b']);
                                         $theory_marks_5=($_POST['theory_marks_2b']);
                                         $theory_co_5=($_POST['theory_co_2b']);
                                         $theory_lo_5=($_POST['theory_lo_2b']);
 
+                                        $theory_chapter_6=($_POST['theory_chapter_2c']);
                                         $theory_marks_6=($_POST['theory_marks_2c']);
                                         $theory_co_6=($_POST['theory_co_2c']);
                                         $theory_lo_6=($_POST['theory_lo_2c']);
 
-
+                                        $theory_chapter_7=($_POST['theory_chapter_3a']);
                                         $theory_marks_7=($_POST['theory_marks_3a']);
                                         $theory_co_7=($_POST['theory_co_3a']);
                                         $theory_lo_7=($_POST['theory_lo_3a']);
 
+                                        $theory_chapter_8=($_POST['theory_chapter_3b']);
                                         $theory_marks_8=($_POST['theory_marks_3b']);
                                         $theory_co_8=($_POST['theory_co_3b']);
                                         $theory_lo_8=($_POST['theory_lo_3b']);
 
+                                        $theory_chapter_9=($_POST['theory_chapter_3c']);
                                         $theory_marks_9=($_POST['theory_marks_3c']);
                                         $theory_co_9=($_POST['theory_co_3c']);
                                         $theory_lo_9=($_POST['theory_lo_3c']);
 
-
+                                        $theory_chapter_10=($_POST['theory_chapter_4a']);
                                         $theory_marks_10=($_POST['theory_marks_4a']);
                                         $theory_co_10=($_POST['theory_co_4a']);
                                         $theory_lo_10=($_POST['theory_lo_4a']);
 
+                                        $theory_chapter_11=($_POST['theory_chapter_4b']);
                                         $theory_marks_11=($_POST['theory_marks_4b']);
                                         $theory_co_11=($_POST['theory_co_4b']);
                                         $theory_lo_11=($_POST['theory_lo_4b']);
 
+                                        $theory_chapter_12=($_POST['theory_chapter_4c']);
                                         $theory_marks_12=($_POST['theory_marks_4c']);
                                         $theory_co_12=($_POST['theory_co_4c']);
                                         $theory_lo_12=($_POST['theory_lo_4c']);
 
-
+                                        $theory_chapter_13=($_POST['theory_chapter_5a']);
                                         $theory_marks_13=($_POST['theory_marks_5a']);
                                         $theory_co_13=($_POST['theory_co_5a']);
                                         $theory_lo_13=($_POST['theory_lo_5a']);
 
+                                        $theory_chapter_14=($_POST['theory_chapter_5b']);
                                         $theory_marks_14=($_POST['theory_marks_5b']);
                                         $theory_co_14=($_POST['theory_co_5b']);
                                         $theory_lo_14=($_POST['theory_lo_5b']);
 
+                                        $theory_chapter_15=($_POST['theory_chapter_5c']);
                                         $theory_marks_15=($_POST['theory_marks_5c']);
                                         $theory_co_15=($_POST['theory_co_5c']);
                                         $theory_lo_15=($_POST['theory_lo_5c']);
@@ -276,12 +301,16 @@ error_reporting(0);
 
                                         for($x=1;$x<=15;$x++)
                                         {
+                                          $qchap ="quiz_chapter_".$x;
                                           $qco = "quiz_co_".$x;
                                           $qlo = "quiz_lo_".$x;
                                           $qmarks = "quiz_marks_".$x;
+                                          $qqchap=$$qchap;
                                           $qqco=$$qco;
                                           $qqlo=$$qlo;
                                           $qqmarks=$$qmarks;
+
+                                          
 
 
                                         if (!$conn) {
@@ -289,7 +318,7 @@ error_reporting(0);
                                             }
                                         $sql = "SELECT question
                                         FROM questions
-                                        WHERE subject='$subject_code' AND co='$qqco' AND lo='$qqlo' AND marks='$qqmarks'
+                                        WHERE subject='$subject_code' AND co='$qqco' AND lo='$qqlo' AND marks='$qqmarks' AND chapter='$qqchap'
                                         ORDER BY RAND() 
                                         LIMIT 1";
 
@@ -298,7 +327,7 @@ error_reporting(0);
                                         if (mysqli_num_rows($result) > 0) {
                                             // output data of each row
                                             while($row = mysqli_fetch_assoc($result)) {
-                                                echo "Question :  " . $row["question"]. "<br>";
+                                                echo "Question " ."$x".": ". $row["question"]. "<br>";
                                                 echo("<br><br>");
                                             }
                                         } else {
@@ -307,17 +336,15 @@ error_reporting(0);
 
 }
                                         for($x=1;$x<=15;$x++)
-                                        {
+                                        { 
+                                          $tchap ="theory_chapter_".$x;
                                           $tco = "theory_co_".$x;
                                           $tlo = "theory_lo_".$x;
                                           $tmarks = "theory_marks_".$x;
+                                          $ttchap=$$tchap;
                                           $ttco=$$tco;
                                           $ttlo=$$tlo;
                                           $ttmarks=$$tmarks;
-
-                                         // echo($ttco);
-                                         // echo($ttlo);
-                                         // echo("<br>");
 
 
                                         if (!$conn) {
@@ -325,7 +352,7 @@ error_reporting(0);
                                             }
                                         $sql = "SELECT question
                                         FROM questions
-                                        WHERE subject='$subject_code' AND co='$ttco' AND lo='$ttlo' AND marks='$ttmarks'
+                                        WHERE subject='$subject_code' AND co='$ttco' AND lo='$ttlo' AND marks='$ttmarks' AND chapter='$ttchap'
                                         ORDER BY RAND() 
                                         LIMIT 1";
 
@@ -334,17 +361,14 @@ error_reporting(0);
                                         if (mysqli_num_rows($result) > 0) {
                                             // output data of each row
                                             while($row = mysqli_fetch_assoc($result)) {
-                                                echo "Question :  " . $row["question"]. "<br>";
+                                                echo "Question " ."$x".": ". $row["question"]. "<br>";
                                                 echo("<br><br>");
                                             }
                                         } else {
                                             //echo "0 results";
                                         }
-
-
                                         }
-                                        
-                                          mysqli_close($conn);
+                                        mysqli_close($conn);
                                           
                                     }
                                 }
