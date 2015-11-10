@@ -16,7 +16,7 @@ error_reporting(0);
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>RVCE Q Paper Creator</title>
+    <title>RVCE Question Paper Creator</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -49,7 +49,7 @@ error_reporting(0);
         </div>
 
         <!--logo start-->
-        <a href="home.php" class="logo"><b>RVCE Q Paper Creator</b></a>
+        <a href="home.php" class="logo"><b>RVCE Question Paper Creator</b></a>
         <!--logo end-->
 
         <form action="login.php" method="POST">
@@ -95,7 +95,7 @@ error_reporting(0);
                   <li class="sub-menu">
                       <a class="active" href="select-graph.php" >
                           <i class="fa fa-bar-chart-o"></i>
-                          <span>View CO Attainment</span>
+                          <span>Review Papers</span>
                       </a>
                   </li>
 
@@ -119,9 +119,28 @@ error_reporting(0);
           <section class="wrapper">
               <div class="row">
                   <div class="col-lg-9 main-chart">
-                      <h1>Select A Paper to Review</h1>
+                      <h1>Select A Paper to Download and Review</h1>
                       <div class="row mt">
                         <?php
+
+// Establish if user is InCharge User
+
+
+                        $servername = "localhost";
+                        $username = "project";
+                        $password = "project";
+                        $dbname = "wp";
+
+                        $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+                        $user_name=$_SESSION['name'];
+                        $arr = explode(' ',trim($user_name));
+                        $fname=$arr[0];
+
+
+
+
+
                           function getAllTiles($files) {
                             $tiles = array();
                             foreach ($files as $file) {
@@ -140,19 +159,27 @@ error_reporting(0);
                             return $tiles;
                           }
 
-                          $dir = 'marks/';
+                          $dir = 'papers/dbms/';
                           $files = scandir($dir);
+                          $a_file=$files[3];
+                          
+                          //echo($files[3]);
+
                           $tiles = getAllTiles($files);
 
                           $count = 1;
                           $flagg = 0;
+if($fname=='Professor'){
+
                           foreach ($tiles as $key => $value) {
                             $value = json_encode($value);
                             $value = str_replace('"', "'", $value);
                             ++$flagg;
                             echo '<form action="generate-graphs.php" method="GET">';
                             echo '<input type="hidden" name="filename" value=' . json_encode($value) . ' />';
-                            echo '<a href="javascript:;" onclick="parentNode.submit();">';
+                           // echo '<a href="javascript:;" onclick="parentNode.submit();">';
+                            echo ('<a href="papers/dbms/'.$a_file.'"');
+                            echo 'onclick="parentNode.submit();">';
                             echo '<div class="col-md-4 col-sm-4 mb">';
                             echo '<div class="green-panel pn donut-chart">';
                             echo '<div class="green-header">';
@@ -166,11 +193,20 @@ error_reporting(0);
                             echo '</div></div></a></form>';
                             $count++;
                           }
+}
                         ?>
+
                       </div><!-- /row -->
+
+
                       <?php
-                        if( $flagg == 0 ) {
-                          echo "<h3>No test marks uploaded yet.</h3>";
+                        if( $flagg == 0 && $fname!='Professor'){
+                          echo "<h3>You do not have access to review papers.</h3>";
+                        }
+                      ?>
+                      <?php
+                        if( $flagg == 0 && $fname=='Professor'){
+                          echo "<h3>Please wait for teachers to add papers.</h3>";
                         }
                       ?>
           <!-- **********************************************************************************************************************************************************

@@ -16,7 +16,7 @@ error_reporting(0);
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina" >
 
-    <title>RVCE Q Paper Creatorr</title>
+    <title>RVCE Question Paper Creatorr</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -47,7 +47,7 @@ error_reporting(0);
         </div>
 
         <!--logo start-->
-        <a href="home.php" class="logo"><b>RVCE Q Paper Creator</b></a>
+        <a href="home.php" class="logo"><b>RVCE Question Paper Creator</b></a>
         <!--logo end-->
 
         <form action="login.php" method="POST">
@@ -83,7 +83,7 @@ error_reporting(0);
                   </li>
 
                   <li class="sub-menu">
-                      <a class="active" href="paper-select.php" >
+                      <a class="active" href="create-paper.php" >
                           <i class="fa fa-tasks"></i>
                           <span>Create Paper</span>
                       </a>
@@ -92,7 +92,7 @@ error_reporting(0);
                   <li class="sub-menu">
                       <a href="select-graph.php" >
                           <i class="fa fa-bar-chart-o"></i>
-                          <span>View CO Attainment</span>
+                          <span>Review Papers</span>
                       </a>
                   </li>
                   

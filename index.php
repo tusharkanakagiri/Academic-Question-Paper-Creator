@@ -15,7 +15,7 @@ error_reporting(0);
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>RVCE Q Paper Creator</title>
+    <title>RVCE Question Paper Creator</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">

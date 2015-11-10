@@ -21,7 +21,7 @@ error_reporting(0);
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>RVCE Q Paper Creator</title>
+    <title>RVCE Question Paper Creator</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -49,7 +49,7 @@ error_reporting(0);
 
     <div id="login-page">
       <header class="header black-bg">
-        <a href="" class="logo"><b>RVCE Q Paper Creator</b></a>
+        <a href="" class="logo"><b>RVCE Question Paper Creator</b></a>
       </header>
 
       <div class="container">

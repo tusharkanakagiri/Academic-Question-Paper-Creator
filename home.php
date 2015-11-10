@@ -16,7 +16,7 @@ error_reporting(0);
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>RVCE Q Paper Creator</title>
+    <title>RVCE Question Paper Creator</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -49,7 +49,7 @@ error_reporting(0);
         </div>
 
         <!--logo start-->
-        <a href="home.php" class="logo"><b>RVCE Q Paper Creator</b></a>
+        <a href="home.php" class="logo"><b>RVCE Question Paper Creator</b></a>
         <!--logo end-->
 
         <form action="login.php" method="POST">
@@ -95,7 +95,7 @@ error_reporting(0);
                   <li class="sub-menu">
                       <a href="select-graph.php" >
                           <i class="fa fa-bar-chart-o"></i>
-                          <span>View CO Attainment</span>
+                          <span>Review Papers</span>
                       </a>
                   </li>
 
@@ -122,7 +122,7 @@ error_reporting(0);
                       <h1>WELCOME TO THE RVCE QUESTION PAPER CREATOR</h1>
                       <div class="row mt">
                       
-                      <!-- Add Student Marks -->
+                      <!-- Create Paper -->
 
 
                       <a href="create-paper.php">
@@ -141,7 +141,7 @@ error_reporting(0);
                         <div class="col-md-4 col-sm-4 mb">
                             <div class="green-panel pn">
                               <div class="green-header">
-                                <h5>CO Attainment Charts</h5>
+                                <h5>Review Papers</h5>
                               </div>
                             <canvas id="cocharts" height="120" width="120"></canvas>
                             <script>
@@ -157,7 +157,7 @@ error_reporting(0);
                                 ];
                                 var myDoughnut = new Chart(document.getElementById("cocharts").getContext("2d")).Doughnut(doughnutData);
                             </script>
-                          <h3>Marks Obtained</h3>
+                          <h3>Papers Created</h3>
                           </div>
                         </div><!--/col-md-4 -->
                       </a>
@@ -245,7 +245,7 @@ error_reporting(0);
     $(document).ready(function () {
       var unique_id = $.gritter.add({
         title: 'Succesfully Logged In!',
-        text: 'Welcome to RVCE Q Paper Creator',
+        text: 'Welcome to RVCE Question Paper Creator',
         image: '<?php echo $_SESSION["profile"]; ?>',
         sticky: false,
         time: '10000',

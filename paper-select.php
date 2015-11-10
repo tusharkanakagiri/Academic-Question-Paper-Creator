@@ -16,7 +16,7 @@ error_reporting(0);
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>RVCE Q Paper Creator</title>
+    <title>RVCE Question Paper Creator</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -49,7 +49,7 @@ error_reporting(0);
         </div>
 
         <!--logo start-->
-        <a href="home.php" class="logo"><b>RVCE Q Paper Creator</b></a>
+        <a href="home.php" class="logo"><b>RVCE Question Paper Creator</b></a>
         <!--logo end-->
 
         <form action="login.php" method="POST">
@@ -86,7 +86,7 @@ error_reporting(0);
                   </li>
 
                   <li class="sub-menu">
-                      <a class="active" href="paper-select.php" >
+                      <a class="active" href="create-paper.php" >
                           <i class="fa fa-tasks"></i>
                           <span>Create Paper</span>
                       </a>
@@ -95,7 +95,7 @@ error_reporting(0);
                   <li class="sub-menu">
                       <a href="select-graph.php" >
                           <i class="fa fa-bar-chart-o"></i>
-                          <span>View CO Attainment</span>
+                          <span>Review Papers</span>
                       </a>
                   </li>
 
@@ -299,8 +299,20 @@ error_reporting(0);
                                         $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 
+                                        require_once 'PHPWord.php';
+                                        $PHPWord = new PHPWord();
+                                        $document = $PHPWord->loadTemplate('Template.docx');
+
+
+                                          $document->setValue('subject_code', $subject_code);
+                                          $document->setValue('test_number', $test_number);
+
+                                          $today_date=date("Y/m/d");
+
+                                          $document->setValue('today_date', $today_date);
+
                                         for($x=1;$x<=15;$x++)
-                                        {
+{
                                           $qchap ="quiz_chapter_".$x;
                                           $qco = "quiz_co_".$x;
                                           $qlo = "quiz_lo_".$x;
@@ -310,8 +322,19 @@ error_reporting(0);
                                           $qqlo=$$qlo;
                                           $qqmarks=$$qmarks;
 
-                                          
 
+                                          $qmd="qm_";
+                                          $qcod="qco_";
+                                          $qlod="qlo_";
+
+                                          $document->setValue($qmd.$x, $qqmarks);
+                                          $document->setValue($qcod.$x, $qqco);
+                                          $document->setValue($qlod.$x, $qqlo);
+
+
+                                          $paper_user=$_SESSION['name'];
+                                          $arr = explode(' ',trim($paper_user));
+                                          $fname=$arr[0];
 
                                         if (!$conn) {
                                                 die("Connection failed: " . mysqli_connect_error());
@@ -327,11 +350,17 @@ error_reporting(0);
                                         if (mysqli_num_rows($result) > 0) {
                                             // output data of each row
                                             while($row = mysqli_fetch_assoc($result)) {
-                                                echo "Question " ."$x".": ". $row["question"]. "<br>";
-                                                echo("<br><br>");
+                                                //echo "Question " ."$x".": ". $row["question"]. "<br>";
+                                                $qd="q_";
+                                                $final_qq = $row["question"];
+
+                                                $document->setValue($qd.$x, $final_qq);
+                                                
                                             }
                                         } else {
                                             //echo "0 results";
+                                          $qd="q_";
+                                          $document->setValue($qd.$x, '');
                                         }
 
 }
@@ -345,6 +374,15 @@ error_reporting(0);
                                           $ttco=$$tco;
                                           $ttlo=$$tlo;
                                           $ttmarks=$$tmarks;
+
+
+                                          $tmd="tm_";
+                                          $tcod="tco_";
+                                          $tlod="tlo_";
+
+                                          $document->setValue($tmd.$x, $ttmarks);
+                                          $document->setValue($tcod.$x, $ttco);
+                                          $document->setValue($tlod.$x, $ttlo);
 
 
                                         if (!$conn) {
@@ -361,20 +399,85 @@ error_reporting(0);
                                         if (mysqli_num_rows($result) > 0) {
                                             // output data of each row
                                             while($row = mysqli_fetch_assoc($result)) {
-                                                echo "Question " ."$x".": ". $row["question"]. "<br>";
-                                                echo("<br><br>");
+                                                
+
+                                                $td="t_";
+                                                $final_tq = $row["question"];
+
+                                                $document->setValue($td.$x, $final_tq);
                                             }
                                         } else {
                                             //echo "0 results";
                                         }
                                         }
+
+                                        $file_name='papers/dbms/'.$paper_user.'.docx';
+                                        $document->save('papers/dbms/'.$paper_user.'.docx');
+                                        
+
+
+    // Querying the professor incharge
+                                          
+                                          $sql = "SELECT incharge
+                                          FROM professors
+                                          WHERE firstname='$fname'" ;
+                                          
+                                          $result = mysqli_query($conn, $sql);
+
+                                        if (mysqli_num_rows($result) > 0) {
+                                            // output data of each row
+                                            while($row = mysqli_fetch_assoc($result)) {
+                                                
+                                                $incharge = $row["incharge"];
+                                                
+                                            }
+                                        } else {
+                                            //echo "0 results";
+                                        }
+
+
+// Querying ID of the professor creating the paper
+
+                                        $sql = "SELECT id
+                                          FROM professors
+                                          WHERE firstname='$fname'" ;
+                                          
+                                          $result = mysqli_query($conn, $sql);
+
+                                        if (mysqli_num_rows($result) > 0) {
+                                            // output data of each row
+                                            while($row = mysqli_fetch_assoc($result)) {
+                                                
+                                                $prof_id=$row["id"];
+                                                
+                                            }
+                                        } else {
+                                            //echo "0 results";
+                                        }
+
+
+// Adding file(filename)  
+                                       
+                                       
+                                        $prof_id=$prof_id-1;
+                                        $nfil='file'.$prof_id;
+
+                                        $sql = "UPDATE `professors` SET `$nfil`='$file_name' WHERE username='$incharge'" ;
+
+                                        $result = mysqli_query($conn, $sql);
+
+                                          
+
+// Close Connection
                                         mysqli_close($conn);
                                           
                                     }
                                 }
 
                       ?>
-
+<div class="col-lg-9 main-chart">
+<h1> Your paper has been created </h1>
+</div>
 
 						
 					</div><!-- /row -->
