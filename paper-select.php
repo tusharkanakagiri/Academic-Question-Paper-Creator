@@ -476,6 +476,7 @@ error_reporting(0);
 
 // Close Connection
                                         mysqli_close($conn);
+
                                           
                                     }
                                 }
@@ -483,6 +484,7 @@ error_reporting(0);
                       ?>
 <div class="col-lg-9 main-chart">
 <h1> Your paper has been created </h1>
+<?php echo('<h3><a href="'.$file_name.'">Click here</a> to Download Paper</h3>'); ?>
 </div>
 
 						
