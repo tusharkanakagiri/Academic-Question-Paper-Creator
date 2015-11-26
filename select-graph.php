@@ -108,7 +108,7 @@ error_reporting(0);
                   <li class="sub-menu">
                       <a href="add-questions.php" >
                           <i class="fa fa-cogs"></i>
-                          <span>Add Questions</span>
+                          <span>Modify Questions</span>
                       </a>
                   </li>
               </ul>
@@ -161,6 +161,7 @@ error_reporting(0);
                                 $tiles[$subcode] = array();
                               }
                               $tiles[$subcode][] = $file;
+                                
                             }
                             return $tiles;
                           }
@@ -168,24 +169,43 @@ error_reporting(0);
                           $dir = 'papers/dbms/';
                           $files = scandir($dir);
                           $a_file=$files[3];
+                          $a_file1=$files[4];
                           
-                          //echo($files[3]);
+                          //echo($a_file1);
+                          //echo($a_file);
 
                           $tiles = getAllTiles($files);
 
                           $count = 1;
                           $flagg = 0;
 if($fname=='Professor'){
-
+                          $xx=0;
                           foreach ($tiles as $key => $value) {
+                            
                             $value = json_encode($value);
                             $value = str_replace('"', "'", $value);
                             ++$flagg;
                             echo '<form action="generate-graphs.php" method="GET">';
                             echo '<input type="hidden" name="filename" value=' . json_encode($value) . ' />';
                            // echo '<a href="javascript:;" onclick="parentNode.submit();">';
-                            echo ('<a href="papers/dbms/'.$a_file.'"');
-                            echo 'onclick="parentNode.submit();">';
+                            if($xx==0)
+                            {
+                              echo ('<a href="papers/dbms/'.$a_file.'"');
+                            }
+                            //echo($a_file1);
+                            //$xx=$xx+1;
+                            //if($xx==1)
+                            {
+                            echo ('<a href="papers/dbms/'.$a_file1.'"');
+                            }
+                            $xx=$xx+1;
+                            if($xx==2)
+                            {
+                            echo ('<a href="papers/dbms/'.$a_file1.'"');
+                            }
+                            $xx=$xx+1;
+                            
+                            echo '<onclick="parentNode.submit();">';
                             echo '<div class="col-md-4 col-sm-4 mb">';
                             echo '<div class="green-panel pn donut-chart">';
                             echo '<div class="green-header">';
@@ -200,6 +220,8 @@ if($fname=='Professor'){
                             $count++;
                           }
 }
+              
+
                         ?>
 
                       </div><!-- /row -->

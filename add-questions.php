@@ -108,7 +108,7 @@ error_reporting(0);
                   <li class="sub-menu">
                       <a href="add-questions.php" >
                           <i class="fa fa-cogs"></i>
-                          <span>Add Questions</span>
+                          <span>Modify Questions</span>
                       </a>
                   </li>
               </ul>
@@ -199,6 +199,48 @@ error_reporting(0);
                           </div>
                       </form>
                       </div><!-- form-panel -->
+<!-- Deleting questions -->
+    <br><br>
+            <h3>Delete Question</h3>
+
+            <div class="form-panel">
+                    <br>
+                      <form class="form-horizontal style-form" method="post" action="delete-question.php">
+                          <input type="hidden" name="new_paper_created" value="1" />
+                          <div class="form-group">
+                              <label class="col-sm-3 col-sm-3 control-label">&emsp;Subject Code</label>
+                              <div class="col-sm-3">
+                                <input type="text" class="form-control" name="del_subject_code" id="subject_code" required/>
+                              </div>
+                          </div>
+                          
+                          
+                          
+                              <table class="table table-hover" id="add-question">
+                                <thead>
+                                  <tr>
+                                    
+                                  </tr>
+                                </thead>
+                                <tbody id="theory_table_body">
+                                  <tr>
+                                   <label class="col-sm-6 col-sm-6 control-label">&emsp;Question</label>
+                              <div class="col-sm-12">
+                                <input type="text" class="form-control" name="del_question" id="subject_code" required/>
+                              </div>
+                                  </tr>
+                                                                 
+                                </tbody>
+                              </table>
+                              <div style="margin-left:40px;" >
+                              <button type="submit" style="width:120px" class="btn btn-round btn-success" id="submit" name="delete-question-submit">Submit</button>
+                          </div>
+                      </form>
+                      </div><!-- form-panel -->
+
+
+
+                      
             </div><!-- /row -->
           </div>
 

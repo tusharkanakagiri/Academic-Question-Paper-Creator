@@ -109,7 +109,7 @@ error_reporting(0);
                   <li class="sub-menu">
                       <a href="add-questions.php" >
                           <i class="fa fa-cogs"></i>
-                          <span>Add Questions</span>
+                          <span>Modify Questions</span>
                       </a>
                   </li>
               </ul>

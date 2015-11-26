@@ -108,7 +108,7 @@ error_reporting(0);
                   <li class="sub-menu">
                       <a href="add-questions.php" >
                           <i class="fa fa-cogs"></i>
-                          <span>Add Questions</span>
+                          <span>Modify Questions</span>
                       </a>
                   </li>
               </ul>
@@ -386,10 +386,7 @@ error_reporting(0);
                                           $tcod="tco_";
                                           $tlod="tlo_";
 
-                                          $document->setValue($tmd.$x, $ttmarks);
-                                          $document->setValue($tcod.$x, $ttco);
-                                          $document->setValue($tlod.$x, $ttlo);
-
+                                          
 
                                         if (!$conn) {
                                                 die("Connection failed: " . mysqli_connect_error());
@@ -411,9 +408,19 @@ error_reporting(0);
                                                 $final_tq = $row["question"];
 
                                                 $document->setValue($td.$x, $final_tq);
+                                                $document->setValue($tmd.$x, $ttmarks);
+                                          $document->setValue($tcod.$x, $ttco);
+                                          $document->setValue($tlod.$x, $ttlo);
+
                                             }
                                         } else {
                                             //echo "0 results";
+                                          $qd="t_";
+                                          $document->setValue($qd.$x, '');
+                                          $document->setValue($tmd.$x, '');
+                                          $document->setValue($tcod.$x, '');
+                                          $document->setValue($tlod.$x, '');
+
                                         }
                                         }
 

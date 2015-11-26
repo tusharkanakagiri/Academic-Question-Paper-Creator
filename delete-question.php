@@ -13,15 +13,12 @@ error_reporting(0);
 
     if ($_SERVER["REQUEST_METHOD"] == "POST")
             {
-            if(isset($_POST['add-question-submit']))
+            if(isset($_POST['delete-question-submit']))
                 {
 
-                	$subject_code=($_POST['subject_code']);
-                    $q_chap=($_POST['add_q_chap']);
-                    $q_marks=($_POST['add_q_marks']);
-                    $q_co=($_POST['add_q_co']);
-                    $q_lo=($_POST['add_q_lo']);
-                    $q_q=($_POST['add_question']);
+                	$subject_code=($_POST['del_subject_code']);
+                    
+                    $q_q=($_POST['del_question']);
 
                     $servername = "localhost";
                     $username = "project";
@@ -32,8 +29,9 @@ error_reporting(0);
                      if (!$conn) {
 	                        die("Connection failed: " . mysqli_connect_error());
 	                    		 }
-	                $sql = "INSERT INTO test (sl,subject,chapter,question,marks,co,lo,used)
-							VALUES ('','$subject_code','$q_chap','$q_q','$q_marks','$q_co','$q_lo','0');";
+	                $sql = "DELETE FROM test 
+                          WHERE question='$q_q' AND subject='$subject_code'";
+                          
 
 	                $result = mysqli_query($conn, $sql);
 
