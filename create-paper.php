@@ -680,7 +680,7 @@ error_reporting(0);
                       </form>
                       <br><br>
                       <div style="margin-left:20px;" >
-                        <a href="paper-select.php">&lt; Return to previous page</a>
+                        <a href="home.php">&lt; Return to previous page</a>
                       </div>
                       <br>
                   </div><!-- form-panel -->
