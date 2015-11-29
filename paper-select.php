@@ -218,77 +218,77 @@ error_reporting(0);
 /* ----------------------     Taking Theory Related Parameters ----------------------------------  */
 
                                         $theory_chapter_1=($_POST['theory_chapter_1a']);
-                                        $theory_marks_1=($_POST['theory_marks_1a']);
+                                        $theory_marks_1=($_POST['theory_marks_1']);
                                         $theory_co_1=($_POST['theory_co_1a']);
                                         $theory_lo_1=($_POST['theory_lo_1a']);
 
                                         $theory_chapter_2=($_POST['theory_chapter_1b']);
-                                        $theory_marks_2=($_POST['theory_marks_1b']);
+                                        $theory_marks_2=($_POST['theory_marks_2']);
                                         $theory_co_2=($_POST['theory_co_1b']);
                                         $theory_lo_2=($_POST['theory_lo_1b']);
 
                                         $theory_chapter_3=($_POST['theory_chapter_1c']);
-                                        $theory_marks_3=($_POST['theory_marks_1c']);
+                                        $theory_marks_3=($_POST['theory_marks_3']);
                                         $theory_co_3=($_POST['theory_co_1c']);
                                         $theory_lo_3=($_POST['theory_lo_1c']);
 
                                         $theory_chapter_4=($_POST['theory_chapter_2a']);
-                                        $theory_marks_4=($_POST['theory_marks_2a']);
+                                        $theory_marks_4=($_POST['theory_marks_4']);
                                         $theory_co_4=($_POST['theory_co_2a']);
                                         $theory_lo_4=($_POST['theory_lo_2a']);
 
                                         $theory_chapter_5=($_POST['theory_chapter_2b']);
-                                        $theory_marks_5=($_POST['theory_marks_2b']);
+                                        $theory_marks_5=($_POST['theory_marks_5']);
                                         $theory_co_5=($_POST['theory_co_2b']);
                                         $theory_lo_5=($_POST['theory_lo_2b']);
 
                                         $theory_chapter_6=($_POST['theory_chapter_2c']);
-                                        $theory_marks_6=($_POST['theory_marks_2c']);
+                                        $theory_marks_6=($_POST['theory_marks_6']);
                                         $theory_co_6=($_POST['theory_co_2c']);
                                         $theory_lo_6=($_POST['theory_lo_2c']);
 
                                         $theory_chapter_7=($_POST['theory_chapter_3a']);
-                                        $theory_marks_7=($_POST['theory_marks_3a']);
+                                        $theory_marks_7=($_POST['theory_marks_7']);
                                         $theory_co_7=($_POST['theory_co_3a']);
                                         $theory_lo_7=($_POST['theory_lo_3a']);
 
                                         $theory_chapter_8=($_POST['theory_chapter_3b']);
-                                        $theory_marks_8=($_POST['theory_marks_3b']);
+                                        $theory_marks_8=($_POST['theory_marks_8']);
                                         $theory_co_8=($_POST['theory_co_3b']);
                                         $theory_lo_8=($_POST['theory_lo_3b']);
 
                                         $theory_chapter_9=($_POST['theory_chapter_3c']);
-                                        $theory_marks_9=($_POST['theory_marks_3c']);
+                                        $theory_marks_9=($_POST['theory_marks_9']);
                                         $theory_co_9=($_POST['theory_co_3c']);
                                         $theory_lo_9=($_POST['theory_lo_3c']);
 
                                         $theory_chapter_10=($_POST['theory_chapter_4a']);
-                                        $theory_marks_10=($_POST['theory_marks_4a']);
+                                        $theory_marks_10=($_POST['theory_marks_10']);
                                         $theory_co_10=($_POST['theory_co_4a']);
                                         $theory_lo_10=($_POST['theory_lo_4a']);
 
                                         $theory_chapter_11=($_POST['theory_chapter_4b']);
-                                        $theory_marks_11=($_POST['theory_marks_4b']);
+                                        $theory_marks_11=($_POST['theory_marks_11']);
                                         $theory_co_11=($_POST['theory_co_4b']);
                                         $theory_lo_11=($_POST['theory_lo_4b']);
 
                                         $theory_chapter_12=($_POST['theory_chapter_4c']);
-                                        $theory_marks_12=($_POST['theory_marks_4c']);
+                                        $theory_marks_12=($_POST['theory_marks_12']);
                                         $theory_co_12=($_POST['theory_co_4c']);
                                         $theory_lo_12=($_POST['theory_lo_4c']);
 
                                         $theory_chapter_13=($_POST['theory_chapter_5a']);
-                                        $theory_marks_13=($_POST['theory_marks_5a']);
+                                        $theory_marks_13=($_POST['theory_marks_13']);
                                         $theory_co_13=($_POST['theory_co_5a']);
                                         $theory_lo_13=($_POST['theory_lo_5a']);
 
                                         $theory_chapter_14=($_POST['theory_chapter_5b']);
-                                        $theory_marks_14=($_POST['theory_marks_5b']);
+                                        $theory_marks_14=($_POST['theory_marks_14']);
                                         $theory_co_14=($_POST['theory_co_5b']);
                                         $theory_lo_14=($_POST['theory_lo_5b']);
 
                                         $theory_chapter_15=($_POST['theory_chapter_5c']);
-                                        $theory_marks_15=($_POST['theory_marks_5c']);
+                                        $theory_marks_15=($_POST['theory_marks_15']);
                                         $theory_co_15=($_POST['theory_co_5c']);
                                         $theory_lo_15=($_POST['theory_lo_5c']);
 

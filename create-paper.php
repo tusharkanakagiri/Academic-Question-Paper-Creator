@@ -32,7 +32,11 @@ error_reporting(0);
 
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <!-- Max Score checker -->
+
     
+
+
   </head>
 
   <body>
@@ -126,7 +130,7 @@ error_reporting(0);
                   
                   <div class="form-panel">
                     <br>
-                      <form class="form-horizontal style-form" method="post" action="paper-select.php">
+                      <form class="form-horizontal style-form" name="create-paper" method="post" action="paper-select.php" onsubmit="return validateScore()">
                           <input type="hidden" name="new_paper_created" value="1" />
                           <div class="form-group">
                               <label class="col-sm-3 col-sm-3 control-label">&emsp;Subject Code</label>
@@ -209,7 +213,7 @@ error_reporting(0);
                                       </div>
                                     
                                     </td>
-                                    <td><input type="number" min="0" max="10" name="theory_marks_1a" class="form-control" required></td>
+                                    <td><input type="number" min="0" max="10" name="theory_marks_1" class="form-control" required></td>
                                     <td>
                                       <select class="form-control" name="theory_co_1a" id="theory_co_1a">
                                         <option value="CO-1">CO-1</option>
@@ -231,7 +235,7 @@ error_reporting(0);
                                   <tr>
                                     <td>1b</td>
                                     <td>
-                                      <input type="number" min="0" max="10" name="theory_chapter_1b" class="form-control" required> 
+                                      <input type="number" min="0" max="10" name="theory_chapter_1b" class="form-control"> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -240,7 +244,7 @@ error_reporting(0);
                                           </div>
                                       </div>
                                     </td>
-                                    <td><input type="number" min="0" max="10" name="theory_marks_1b" class="form-control"></td>
+                                    <td><input type="number" min="0" max="10" name="theory_marks_2" class="form-control"></td>
                                     <td>
                                       <select class="form-control" name="theory_co_1b" id="theory_co_1a">
                                         <option value="CO-1">CO-1</option>
@@ -262,7 +266,7 @@ error_reporting(0);
                                   <tr>
                                     <td>1c</td>
                                     <td>
-                                      <input type="number" min="0" max="10" name="theory_chapter_1c" class="form-control" required> 
+                                      <input type="number" min="0" max="10" name="theory_chapter_1c" class="form-control"> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -271,7 +275,7 @@ error_reporting(0);
                                           </div>
                                       </div>
                                     </td>
-                                    <td><input type="number" min="0" max="10" name="theory_marks_1c" class="form-control"></td>
+                                    <td><input type="number" min="0" max="10" name="theory_marks_3" class="form-control"></td>
                                     <td>
                                       <select class="form-control" name="theory_co_1c" id="theory_co_1a">
                                         <option value="CO-1">CO-1</option>
@@ -304,7 +308,7 @@ error_reporting(0);
                                           </div>
                                       </div>
                                     </td>
-                                    <td><input type="number" min="0" max="10" name="theory_marks_2a" class="form-control" required></td>
+                                    <td><input type="number" min="0" max="10" name="theory_marks_4" class="form-control" required></td>
                                     <td>
                                       <select class="form-control" name="theory_co_2a" id="theory_co_1a">
                                         <option value="CO-1">CO-1</option>
@@ -326,7 +330,7 @@ error_reporting(0);
                                   <tr>
                                     <td>2b</td>
                                     <td>
-                                      <input type="number" min="0" max="10" name="theory_chapter_2b" class="form-control" required> 
+                                      <input type="number" min="0" max="10" name="theory_chapter_2b" class="form-control"> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -335,7 +339,7 @@ error_reporting(0);
                                           </div>
                                       </div>
                                     </td>
-                                    <td><input type="number" min="0" max="10" name="theory_marks_2b" class="form-control"></td>
+                                    <td><input type="number" min="0" max="10" name="theory_marks_5" class="form-control"></td>
                                     <td>
                                       <select class="form-control" name="theory_co_2b" id="theory_co_1a">
                                         <option value="CO-1">CO-1</option>
@@ -357,7 +361,7 @@ error_reporting(0);
                                   <tr>
                                     <td>2c</td>
                                     <td>
-                                      <input type="number" min="0" max="10" name="theory_chapter_2c" class="form-control" required> 
+                                      <input type="number" min="0" max="10" name="theory_chapter_2c" class="form-control"> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -366,7 +370,7 @@ error_reporting(0);
                                           </div>
                                       </div>
                                     </td>
-                                    <td><input type="number" min="0" max="10" name="theory_marks_2c" class="form-control"></td>
+                                    <td><input type="number" min="0" max="10" name="theory_marks_6" class="form-control"></td>
                                     <td>
                                       <select class="form-control" name="theory_co_2c" id="theory_co_1a">
                                         <option value="CO-1">CO-1</option>
@@ -399,7 +403,7 @@ error_reporting(0);
                                           </div>
                                       </div>
                                     </td>
-                                    <td><input type="number" min="0" max="10" name="theory_marks_3a" class="form-control" required></td>
+                                    <td><input type="number" min="0" max="10" name="theory_marks_7" class="form-control" required></td>
                                     <td>
                                       <select class="form-control" name="theory_co_3a" id="theory_co_1a">
                                         <option value="CO-1">CO-1</option>
@@ -421,7 +425,7 @@ error_reporting(0);
                                   <tr>
                                     <td>3b</td>
                                     <td>
-                                      <input type="number" min="0" max="10" name="theory_chapter_3b" class="form-control" required> 
+                                      <input type="number" min="0" max="10" name="theory_chapter_3b" class="form-control" > 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -430,7 +434,7 @@ error_reporting(0);
                                           </div>
                                       </div>
                                     </td>
-                                    <td><input type="number" min="0" max="10" name="theory_marks_3b" class="form-control"></td>
+                                    <td><input type="number" min="0" max="10" name="theory_marks_8" class="form-control"></td>
                                     <td>
                                       <select class="form-control" name="theory_co_3b" id="theory_co_1a">
                                         <option value="CO-1">CO-1</option>
@@ -452,7 +456,7 @@ error_reporting(0);
                                   <tr>
                                     <td>3c</td>
                                     <td>
-                                      <input type="number" min="0" max="10" name="theory_chapter_3c" class="form-control" required> 
+                                      <input type="number" min="0" max="10" name="theory_chapter_3c" class="form-control" > 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -461,7 +465,7 @@ error_reporting(0);
                                           </div>
                                       </div>
                                     </td>
-                                    <td><input type="number" min="0" max="10" name="theory_marks_3c" class="form-control"></td>
+                                    <td><input type="number" min="0" max="10" name="theory_marks_9" class="form-control"></td>
                                    <td>
                                       <select class="form-control" name="theory_co_3c" id="theory_co_1a">
                                         <option value="CO-1">CO-1</option>
@@ -494,7 +498,7 @@ error_reporting(0);
                                           </div>
                                       </div>
                                     </td>
-                                    <td><input type="number" min="0" max="10" name="theory_marks_4a" class="form-control" required></td>
+                                    <td><input type="number" min="0" max="10" name="theory_marks_10" class="form-control" required></td>
                                     
                                      <td>
                                       <select class="form-control" name="theory_co_4a" id="theory_co_1a">
@@ -517,7 +521,7 @@ error_reporting(0);
                                   <tr>
                                     <td>4b</td>
                                     <td>
-                                      <input type="number" min="0" max="10" name="theory_chapter_4b" class="form-control" required> 
+                                      <input type="number" min="0" max="10" name="theory_chapter_4b" class="form-control"> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -526,7 +530,7 @@ error_reporting(0);
                                           </div>
                                       </div>
                                     </td>
-                                    <td><input type="number" min="0" max="10" name="theory_marks_4b" class="form-control"></td>
+                                    <td><input type="number" min="0" max="10" name="theory_marks_11" class="form-control"></td>
                                     <td>
                                       <select class="form-control" name="theory_co_4b" id="theory_co_1a">
                                         <option value="CO-1">CO-1</option>
@@ -548,7 +552,7 @@ error_reporting(0);
                                   <tr>
                                     <td>4c</td>
                                     <td>
-                                      <input type="number" min="0" max="10" name="theory_chapter_4c" class="form-control" required> 
+                                      <input type="number" min="0" max="10" name="theory_chapter_4c" class="form-control"> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -557,7 +561,7 @@ error_reporting(0);
                                           </div>
                                       </div>
                                     </td>
-                                    <td><input type="number" min="0" max="10" name="theory_marks_4c" class="form-control"></td>
+                                    <td><input type="number" min="0" max="10" name="theory_marks_12" class="form-control"></td>
                                     <td>
                                       <select class="form-control" name="theory_co_4c" id="theory_co_1a">
                                         <option value="CO-1">CO-1</option>
@@ -590,7 +594,7 @@ error_reporting(0);
                                           </div>
                                       </div>
                                     </td>
-                                    <td><input type="number" min="0" max="10" name="theory_marks_5a" class="form-control" required></td>
+                                    <td><input type="number" min="0" max="10" name="theory_marks_13" class="form-control" required></td>
                                    <td>
                                       <select class="form-control" name="theory_co_5a" id="theory_co_1a">
                                         <option value="CO-1">CO-1</option>
@@ -612,7 +616,7 @@ error_reporting(0);
                                   <tr>
                                     <td>5b</td>
                                     <td>
-                                      <input type="number" min="0" max="10" name="theory_chapter_5b" class="form-control" required> 
+                                      <input type="number" min="0" max="10" name="theory_chapter_5b" class="form-control"> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -621,7 +625,7 @@ error_reporting(0);
                                           </div>
                                       </div>
                                     </td>
-                                    <td><input type="number" min="0" max="10" name="theory_marks_5b" class="form-control"></td>
+                                    <td><input type="number" min="0" max="10" name="theory_marks_14" class="form-control"></td>
                                    <td>
                                       <select class="form-control" name="theory_co_5b" id="theory_co_1a">
                                         <option value="CO-1">CO-1</option>
@@ -643,7 +647,7 @@ error_reporting(0);
                                   <tr>
                                     <td>5c</td>
                                     <td>
-                                      <input type="number" min="0" max="10" name="theory_chapter_5c" class="form-control" required> 
+                                      <input type="number" min="0" max="10" name="theory_chapter_5c" class="form-control"> 
                                       <div class="col-sm-1 text-center">
                                           <div class="switch switch-square"
                                                data-on-label="<i class=' fa fa-check'></i>"
@@ -652,7 +656,7 @@ error_reporting(0);
                                           </div>
                                       </div>
                                     </td>
-                                    <td><input type="number" min="0" max="10" name="theory_marks_5c" class="form-control"></td>
+                                    <td><input type="number" min="0" max="10" name="theory_marks_15" class="form-control"></td>
                                     <td>
                                       <select class="form-control" name="theory_co_5c" id="theory_co_1a">
                                         <option value="CO-1">CO-1</option>
@@ -675,7 +679,7 @@ error_reporting(0);
                               </table>
 
                           <div style="margin-left:40px;" >
-                              <button type="submit" style="width:120px" class="btn btn-round btn-success" id="submit" name="question-submit">Submit</button>
+                              <button type="submit" style="width:120px" class="btn btn-round btn-success" id="submit" name="question-submit" >Submit</button>
                           </div>
                       </form>
                       <br><br>
@@ -757,6 +761,36 @@ error_reporting(0);
     <script src="assets/js/form-component.js"></script>    
 
     <!--script for this page-->
+    <!-- Max Score Checker-->
+    <script type="text/javascript">
+function validateScore() {
+    var qsum=0;
+    var tsum=0;
+    var q_no = document.forms["create-paper"]["no_of_quiz"].value;
+    for (var i = 1; i <= q_no ; i++) 
+    {
+    var q = "qmark"+i.toString();
+    var qmark = document.forms["create-paper"][q].value;
+    qsum+=Number(qmark);
+    }
+    for (var i = 1; i <= 15 ; i++) 
+    {
+    var t = "theory_marks_"+i.toString();
+    var tmark = document.forms["create-paper"][t].value;
+    tsum+=Number(tmark);
+    }
+    
+    
+    if (qsum != 15 ) {
+        alert("Quiz Total Marks is "+qsum+". Change accordingly");
+        return false;
+    }
+    if (tsum != 50) {
+        alert("Theory Total Marks is "+tsum+". Change accordingly");
+        return false;
+    }
+}
+</script>
     <script src="assets/js/sparkline-chart.js"></script>    
     <script src="assets/js/zabuto_calendar.js"></script>
     <script type="application/javascript">
